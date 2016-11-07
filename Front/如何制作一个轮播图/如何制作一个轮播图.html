@@ -2,53 +2,96 @@
 <html>
 <head>
 	<title>如何制作一个轮播图</title>
+
 	<!-- js脚本 -->
 	<script type="text/javascript">
 
-	// TODO: 添加页码显示,页码控制,手势停留判断扥。
 
+
+	var g_timer;
+	var g_page_index;
+	var g_page_count;
 	/*! 窗口事件 */
 	window.onload = function () {
-		setInterval(function() {
+		g_page_index = 0;
+		g_page_count = document.getElementsByTagName("img").length;
+
+		swithIndicator(g_page_index);
+
+		g_timer = setInterval(function() {
 			next();
+
+			if (++g_page_index > g_page_count - 1) { g_page_index = 0; }
+			swithIndicator(g_page_index);
 		} , 2000);
 
+		/*! TODO: 添加轮播指示器选择状态 */
+
+		/*! TODO: 添加轮播指示器点击状态 */
+
 	}
 
-/*! 下一页 */
-function next() {
+	 
 
-	/*! 初始化变量 */
-	var images = document.getElementsByTagName("img");
-	var inner = document.getElementById("inner");
-	var banner = document.getElementById("banner");
+	/*! 下一页 */
+	function next() {
 
-	/* 定时器轮播 */
-	var i = 0;
-	var timer = setInterval(function() {
-			i = i - 5;
-			inner.style.left = i + "px";
-			
-			/*! 
-				每次偏移第一张时候,将第一张补到最后,并移除掉,重置偏移位
-				@discussion 
-				这种方法仅仅适用于网页没有手势拖动的情况下,如果有手势拖动的情况下,就得使用其他策略解决问题了。
-			 */
-			if (i <= -banner.offsetWidth) {
+		/*! 初始化变量 */
+		var images = document.getElementsByTagName("img");
+		var inner = document.getElementById("inner");
+		var banner = document.getElementById("banner");
 
-				var offsetImage = images[0];
-				inner.removeChild(offsetImage);
-				inner.appendChild(offsetImage);
-				inner.style.left = "0px";
-				clearInterval(timer);
-			}
-	},1);
-}
+		/* 定时器轮播 */
+		var i = 0;
+		var timer = setInterval(function() {
+				i = i - 5;
+				inner.style.left = i + "px";
+				
+				/*! 
+					每次偏移第一张时候,将第一张补到最后,并移除掉,重置偏移位
+					@discussion 
+					这种方法仅仅适用于网页没有手势拖动的情况下,如果有手势拖动的情况下,就得使用其他策略解决问题了。
+				 */
+				if (i <= -banner.offsetWidth) {
+
+					var offsetImage = images[0];
+					inner.removeChild(offsetImage);
+					inner.appendChild(offsetImage);
+					inner.style.left = "0px";
+					clearInterval(timer);
+				}
+		},1);
+	}
 
 	/*! 切换到制定页 */
-	function switchToPage(pageIndex) {
+	function switchPage(pageIndex) {
 
 	}
+
+	/*! 切换指示器 */
+	function swithIndicator(pageIndex) {
+		var indicators = document.getElementsByTagName("li");
+		for (var i = indicators.length - 1; i >= 0; i--) {
+			indicators[i].setAttribute("class","page_indicator_unselect")
+		}
+		indicators[pageIndex].setAttribute("class","page_indicator_select");
+	}
+
+	/*! 鼠标停留在Banner */
+	function onMouseOverBanner() {
+		clearInterval(g_timer);
+	}
+
+	/*! 鼠标移除Banner */
+	function onMouseOutBanner() {
+		swithIndicator(g_page_index);
+		g_timer = setInterval(function() {
+			next();
+			if (++g_page_index > g_page_count - 1) { g_page_index = 0;}
+			swithIndicator(g_page_index);
+		} , 2000);
+	}
+
 	</script>
 
 	<!-- 样式表 -->
@@ -59,11 +102,13 @@ function next() {
 			padding: 0px;
 			border: 0px;
 		}
+	
+	/** Banner 块 **/
 
 		#banner 
 		{
-			width: 505px;		/*! 设置Banner宽度 */
-			height: 220px;		/*! 设置Banner高度 */
+			width: 500px;		/*! 设置Banner宽度 */
+			height: 276px;		/*! 设置Banner高度 */
 			overflow: hidden;	/*! 设置OverFlow隐藏 */
 			position: relative;
 			left: 0;
@@ -81,25 +126,68 @@ function next() {
 
 		#inner img 
 		{
-			width: 505px;
+			width: 500px;
+			height: 100%;
 			float: left;
 		}
- 
+	/** 指示器 **/
+		#page_indicator
+		{
+		   width: 100%;
+		   height: 20px;
+		   position:absolute;
+		   bottom: 0px;
+		   text-align: center;
+		}
+		
+		#page_indicator ul {
+			width: 100px;
+			height: 20px;
+			margin: 0 auto;
+		}
+
+		#page_indicator ul li {
+
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+
+		.page_indicator_select {
+			background-color: #66ffff;
+		}
+
+		.page_indicator_unselect {
+			background-color: #ffffff;
+		}
+	
+	
+	</style>
+
 	
 
-
-	</style>
 	<meta charset="utf-8">
 </head>
 <body>
 
 <div id="banner"> <!-- 图片展示区 -->
-	<div id="inner">  <!-- 所有图片并排块 -->
-		<img src="./images/banner1.jpg"/>
-		<img src="./images/banner2.jpg"/>
-		<img src="./images/banner3.jpg"/>
-		<img src="./images/banner4.jpg"/>
-		<img src="./images/banner5.jpg"/>
+	<div id="inner" onmouseover="onMouseOverBanner()" onmouseout="onMouseOutBanner()">  <!-- 所有图片并排块 -->
+		<img src="./images/1.jpg"/>
+		<img src="./images/2.jpg"/>
+		<img src="./images/3.jpg"/>
+		<img src="./images/4.jpg"/>
+		<img src="./images/5.jpg"/>
+	</div>
+
+	<div id="page_indicator">
+		<ul>
+			<li class="page_indicator_select"></li>
+			<li class="page_indicator_unselect"></li>
+			<li class="page_indicator_unselect"></li>
+			<li class="page_indicator_unselect"></li>
+			<li class="page_indicator_unselect"></li>
+		</ul>
 	</div>
 </div>
 
