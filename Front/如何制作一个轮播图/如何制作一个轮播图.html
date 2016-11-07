@@ -2,32 +2,53 @@
 <html>
 <head>
 	<title>如何制作一个轮播图</title>
-
 	<!-- js脚本 -->
 	<script type="text/javascript">
 
+	// TODO: 添加页码显示,页码控制,手势停留判断扥。
+
 	/*! 窗口事件 */
 	window.onload = function () {
-		/*! 获取img所有元素 */
-		var images = document.getElementsByTagName("img");
-		var inner = document.getElementById("inner");
-	
-	/* 定时器轮播 */
-		var i = 0;
-		var timer = setInterval(function() {
-				i = i - 1;
-				inner.style.left = i + "px";
-				/*! 每次偏移第一张时候,将第一张补到最后,并移除掉,重置偏移位 */
-				if (i == -505) {
-					var offsetImage = images[0];
-					inner.removeChild(offsetImage);
-					inner.appendChild(offsetImage);
-					i = 0;
-				}
-		},10);
+		setInterval(function() {
+			next();
+		} , 2000);
 
 	}
-		
+
+/*! 下一页 */
+function next() {
+
+	/*! 初始化变量 */
+	var images = document.getElementsByTagName("img");
+	var inner = document.getElementById("inner");
+	var banner = document.getElementById("banner");
+
+	/* 定时器轮播 */
+	var i = 0;
+	var timer = setInterval(function() {
+			i = i - 5;
+			inner.style.left = i + "px";
+			
+			/*! 
+				每次偏移第一张时候,将第一张补到最后,并移除掉,重置偏移位
+				@discussion 
+				这种方法仅仅适用于网页没有手势拖动的情况下,如果有手势拖动的情况下,就得使用其他策略解决问题了。
+			 */
+			if (i <= -banner.offsetWidth) {
+
+				var offsetImage = images[0];
+				inner.removeChild(offsetImage);
+				inner.appendChild(offsetImage);
+				inner.style.left = "0px";
+				clearInterval(timer);
+			}
+	},1);
+}
+
+	/*! 切换到制定页 */
+	function switchToPage(pageIndex) {
+
+	}
 	</script>
 
 	<!-- 样式表 -->
@@ -64,6 +85,9 @@
 			float: left;
 		}
  
+	
+
+
 	</style>
 	<meta charset="utf-8">
 </head>
@@ -78,6 +102,7 @@
 		<img src="./images/banner5.jpg"/>
 	</div>
 </div>
+
 
 </body>
 </html>
