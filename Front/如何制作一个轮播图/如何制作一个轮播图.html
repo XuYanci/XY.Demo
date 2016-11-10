@@ -6,34 +6,55 @@
 	<!-- js脚本 -->
 	<script type="text/javascript">
 
-
-
 	var g_timer;
 	var g_page_index;
 	var g_page_count;
+	
 	/*! 窗口事件 */
 	window.onload = function () {
 		g_page_index = 0;
 		g_page_count = document.getElementsByTagName("img").length;
 
-		swithIndicator(g_page_index);
+		
+		var images = document.getElementsByTagName("img");
+		var inner = document.getElementById("inner");
+		var banner = document.getElementById("banner");
 
+		/*! 原来是 1,2,3,4,5 序列,尾巴添加 1, 现在则是 1,2,3,4,5,1 序列 */
+		if (images.length > 0) {
+			var tailImage = images[0].cloneNode(true);
+			inner.appendChild(tailImage);
+		}
+
+		/*! 初始化 */
+		swithIndicator(g_page_index);
+		switchPage(g_page_index);
+
+		/*! 设置轮播图定时器 */
 		g_timer = setInterval(function() {
 			next();
-
-			if (++g_page_index > g_page_count - 1) { g_page_index = 0; }
-			swithIndicator(g_page_index);
 		} , 2000);
 
-		/*! TODO: 添加轮播指示器选择状态 */
-
-		/*! TODO: 添加轮播指示器点击状态 */
-
+		/*! 添加指示器事件 */
+		var indicators = document.getElementsByTagName("li");
+		for (var i = 0; i < indicators.length; i++) {
+			 var trigger = function(){
+				  var temp = i;
+				 indicators[i].onclick = function() {
+				 	switchPage(temp);
+				 	swithIndicator(temp);
+				 }
+				  indicators[i].onmouseout = function() {
+				 	onMouseOutBanner();
+				 }
+				 indicators[i].onmouseover = function() {
+				 	onMouseOverBanner();
+				 }
+			}
+			trigger();
+		}
 	}
 
-	 
-
-	/*! 下一页 */
 	function next() {
 
 		/*! 初始化变量 */
@@ -41,31 +62,39 @@
 		var inner = document.getElementById("inner");
 		var banner = document.getElementById("banner");
 
+		var offsetLeft = inner.offsetLeft;
+		var i = inner.offsetLeft;
+
+		if (++g_page_index > g_page_count - 1) {
+			g_page_index = 0;
+		}
+
 		/* 定时器轮播 */
-		var i = 0;
 		var timer = setInterval(function() {
 				i = i - 5;
-				inner.style.left = i + "px";
+				inner.style.left =  i + "px";
 				
-				/*! 
-					每次偏移第一张时候,将第一张补到最后,并移除掉,重置偏移位
-					@discussion 
-					这种方法仅仅适用于网页没有手势拖动的情况下,如果有手势拖动的情况下,就得使用其他策略解决问题了。
-				 */
-				if (i <= -banner.offsetWidth) {
-
-					var offsetImage = images[0];
-					inner.removeChild(offsetImage);
-					inner.appendChild(offsetImage);
-					inner.style.left = "0px";
+				if (i <= -(banner.offsetWidth + -offsetLeft)) {
 					clearInterval(timer);
+					swithIndicator(g_page_index);
+				}
+
+				if (-i >=  (banner.offsetWidth * (images.length - 1))) {
+					 inner.style.left = 0 + "px"; 
+					 g_page_index = 0;
+					 swithIndicator(g_page_index);
+					 switchPage(g_page_index);
 				}
 		},1);
 	}
 
 	/*! 切换到制定页 */
 	function switchPage(pageIndex) {
-
+		var images = document.getElementsByTagName("img");
+		var inner = document.getElementById("inner");
+		var banner = document.getElementById("banner");
+		g_page_index = pageIndex;
+		inner.style.left = pageIndex * -banner.offsetWidth + "px";
 	}
 
 	/*! 切换指示器 */
@@ -87,8 +116,6 @@
 		swithIndicator(g_page_index);
 		g_timer = setInterval(function() {
 			next();
-			if (++g_page_index > g_page_count - 1) { g_page_index = 0;}
-			swithIndicator(g_page_index);
 		} , 2000);
 	}
 
@@ -102,9 +129,6 @@
 			padding: 0px;
 			border: 0px;
 		}
-	
-	/** Banner 块 **/
-
 		#banner 
 		{
 			width: 500px;		/*! 设置Banner宽度 */
@@ -130,7 +154,7 @@
 			height: 100%;
 			float: left;
 		}
-	/** 指示器 **/
+	 
 		#page_indicator
 		{
 		   width: 100%;
@@ -161,7 +185,7 @@
 		.page_indicator_unselect {
 			background-color: #ffffff;
 		}
-	
+
 	
 	</style>
 
