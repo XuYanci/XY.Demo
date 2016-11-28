@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6CA8EC2B259F02FCFE202ED6B1B306A7F6F48A8C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6CA8EC2B259F02FCFE202ED6B1B306A7F6F48A8C" : 9223372036854775807,
+    "6D97EA148573B3DEC0E705A25B78217DC12873FD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FD9B143-1348-4267-8980-B3734606D079",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6CA8EC2B259F02FCFE202ED6B1B306A7F6F48A8C" : "LikeWeChatPhotoBrowser\/",
+    "6D97EA148573B3DEC0E705A25B78217DC12873FD" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LikeWechatPhotoBrowser",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LikeWechatPhotoBrowser\/LikeWechatPhotoBrowser.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XuYanci\/LikeWeChatPhotoBrowser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6CA8EC2B259F02FCFE202ED6B1B306A7F6F48A8C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XuYanci\/Monkey.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D97EA148573B3DEC0E705A25B78217DC12873FD"
+    }
+  ]
+}
