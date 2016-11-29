@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD36A26B1DEE3E9D00598384 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A26A1DEE3E9D00598384 /* main.m */; };
+		AD36A26E1DEE3E9D00598384 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A26D1DEE3E9D00598384 /* AppDelegate.m */; };
+		AD36A2711DEE3E9D00598384 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A2701DEE3E9D00598384 /* ViewController.m */; };
+		AD36A2741DEE3E9D00598384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD36A2721DEE3E9D00598384 /* Main.storyboard */; };
+		AD36A2761DEE3E9D00598384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD36A2751DEE3E9D00598384 /* Assets.xcassets */; };
+		AD36A2791DEE3E9D00598384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */; };
+		AD36A2841DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A2831DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m */; };
+		AD36A28F1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD36A2801DEE3E9D00598384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD36A25E1DEE3E9D00598384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD36A2651DEE3E9D00598384;
+			remoteInfo = YCSimpleSliderDrawer;
+		};
+		AD36A28B1DEE3E9D00598384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD36A25E1DEE3E9D00598384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD36A2651DEE3E9D00598384;
+			remoteInfo = YCSimpleSliderDrawer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD36A2661DEE3E9D00598384 /* YCSimpleSliderDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCSimpleSliderDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD36A26A1DEE3E9D00598384 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD36A26C1DEE3E9D00598384 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD36A26D1DEE3E9D00598384 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD36A26F1DEE3E9D00598384 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD36A2701DEE3E9D00598384 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD36A2731DEE3E9D00598384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD36A2751DEE3E9D00598384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD36A2781DEE3E9D00598384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD36A27A1DEE3E9D00598384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD36A27F1DEE3E9D00598384 /* YCSimpleSliderDrawerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCSimpleSliderDrawerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD36A2831DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCSimpleSliderDrawerTests.m; sourceTree = "<group>"; };
+		AD36A2851DEE3E9D00598384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD36A28A1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCSimpleSliderDrawerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCSimpleSliderDrawerUITests.m; sourceTree = "<group>"; };
+		AD36A2901DEE3E9D00598384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD36A2631DEE3E9D00598384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A27C1DEE3E9D00598384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A2871DEE3E9D00598384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD36A25D1DEE3E9D00598384 = {
+			isa = PBXGroup;
+			children = (
+				AD36A2681DEE3E9D00598384 /* YCSimpleSliderDrawer */,
+				AD36A2821DEE3E9D00598384 /* YCSimpleSliderDrawerTests */,
+				AD36A28D1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests */,
+				AD36A2671DEE3E9D00598384 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD36A2671DEE3E9D00598384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD36A2661DEE3E9D00598384 /* YCSimpleSliderDrawer.app */,
+				AD36A27F1DEE3E9D00598384 /* YCSimpleSliderDrawerTests.xctest */,
+				AD36A28A1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD36A2681DEE3E9D00598384 /* YCSimpleSliderDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				AD36A26C1DEE3E9D00598384 /* AppDelegate.h */,
+				AD36A26D1DEE3E9D00598384 /* AppDelegate.m */,
+				AD36A26F1DEE3E9D00598384 /* ViewController.h */,
+				AD36A2701DEE3E9D00598384 /* ViewController.m */,
+				AD36A2721DEE3E9D00598384 /* Main.storyboard */,
+				AD36A2751DEE3E9D00598384 /* Assets.xcassets */,
+				AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */,
+				AD36A27A1DEE3E9D00598384 /* Info.plist */,
+				AD36A2691DEE3E9D00598384 /* Supporting Files */,
+			);
+			path = YCSimpleSliderDrawer;
+			sourceTree = "<group>";
+		};
+		AD36A2691DEE3E9D00598384 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD36A26A1DEE3E9D00598384 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD36A2821DEE3E9D00598384 /* YCSimpleSliderDrawerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD36A2831DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m */,
+				AD36A2851DEE3E9D00598384 /* Info.plist */,
+			);
+			path = YCSimpleSliderDrawerTests;
+			sourceTree = "<group>";
+		};
+		AD36A28D1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */,
+				AD36A2901DEE3E9D00598384 /* Info.plist */,
+			);
+			path = YCSimpleSliderDrawerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD36A2651DEE3E9D00598384 /* YCSimpleSliderDrawer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD36A2931DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawer" */;
+			buildPhases = (
+				AD36A2621DEE3E9D00598384 /* Sources */,
+				AD36A2631DEE3E9D00598384 /* Frameworks */,
+				AD36A2641DEE3E9D00598384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YCSimpleSliderDrawer;
+			productName = YCSimpleSliderDrawer;
+			productReference = AD36A2661DEE3E9D00598384 /* YCSimpleSliderDrawer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD36A27E1DEE3E9D00598384 /* YCSimpleSliderDrawerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD36A2961DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerTests" */;
+			buildPhases = (
+				AD36A27B1DEE3E9D00598384 /* Sources */,
+				AD36A27C1DEE3E9D00598384 /* Frameworks */,
+				AD36A27D1DEE3E9D00598384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD36A2811DEE3E9D00598384 /* PBXTargetDependency */,
+			);
+			name = YCSimpleSliderDrawerTests;
+			productName = YCSimpleSliderDrawerTests;
+			productReference = AD36A27F1DEE3E9D00598384 /* YCSimpleSliderDrawerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD36A2891DEE3E9D00598384 /* YCSimpleSliderDrawerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD36A2991DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerUITests" */;
+			buildPhases = (
+				AD36A2861DEE3E9D00598384 /* Sources */,
+				AD36A2871DEE3E9D00598384 /* Frameworks */,
+				AD36A2881DEE3E9D00598384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD36A28C1DEE3E9D00598384 /* PBXTargetDependency */,
+			);
+			name = YCSimpleSliderDrawerUITests;
+			productName = YCSimpleSliderDrawerUITests;
+			productReference = AD36A28A1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD36A25E1DEE3E9D00598384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Yanci;
+				TargetAttributes = {
+					AD36A2651DEE3E9D00598384 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					AD36A27E1DEE3E9D00598384 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AD36A2651DEE3E9D00598384;
+					};
+					AD36A2891DEE3E9D00598384 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AD36A2651DEE3E9D00598384;
+					};
+				};
+			};
+			buildConfigurationList = AD36A2611DEE3E9D00598384 /* Build configuration list for PBXProject "YCSimpleSliderDrawer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD36A25D1DEE3E9D00598384;
+			productRefGroup = AD36A2671DEE3E9D00598384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD36A2651DEE3E9D00598384 /* YCSimpleSliderDrawer */,
+				AD36A27E1DEE3E9D00598384 /* YCSimpleSliderDrawerTests */,
+				AD36A2891DEE3E9D00598384 /* YCSimpleSliderDrawerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD36A2641DEE3E9D00598384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD36A2791DEE3E9D00598384 /* LaunchScreen.storyboard in Resources */,
+				AD36A2761DEE3E9D00598384 /* Assets.xcassets in Resources */,
+				AD36A2741DEE3E9D00598384 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A27D1DEE3E9D00598384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A2881DEE3E9D00598384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD36A2621DEE3E9D00598384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD36A2711DEE3E9D00598384 /* ViewController.m in Sources */,
+				AD36A26E1DEE3E9D00598384 /* AppDelegate.m in Sources */,
+				AD36A26B1DEE3E9D00598384 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A27B1DEE3E9D00598384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD36A2841DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD36A2861DEE3E9D00598384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD36A28F1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD36A2811DEE3E9D00598384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD36A2651DEE3E9D00598384 /* YCSimpleSliderDrawer */;
+			targetProxy = AD36A2801DEE3E9D00598384 /* PBXContainerItemProxy */;
+		};
+		AD36A28C1DEE3E9D00598384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD36A2651DEE3E9D00598384 /* YCSimpleSliderDrawer */;
+			targetProxy = AD36A28B1DEE3E9D00598384 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD36A2721DEE3E9D00598384 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD36A2731DEE3E9D00598384 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD36A2781DEE3E9D00598384 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD36A2911DEE3E9D00598384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD36A2921DEE3E9D00598384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD36A2941DEE3E9D00598384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YCSimpleSliderDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD36A2951DEE3E9D00598384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YCSimpleSliderDrawer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD36A2971DEE3E9D00598384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YCSimpleSliderDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCSimpleSliderDrawer.app/YCSimpleSliderDrawer";
+			};
+			name = Debug;
+		};
+		AD36A2981DEE3E9D00598384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YCSimpleSliderDrawerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YCSimpleSliderDrawer.app/YCSimpleSliderDrawer";
+			};
+			name = Release;
+		};
+		AD36A29A1DEE3E9D00598384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YCSimpleSliderDrawerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YCSimpleSliderDrawer;
+			};
+			name = Debug;
+		};
+		AD36A29B1DEE3E9D00598384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YCSimpleSliderDrawerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YCSimpleSliderDrawer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD36A2611DEE3E9D00598384 /* Build configuration list for PBXProject "YCSimpleSliderDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD36A2911DEE3E9D00598384 /* Debug */,
+				AD36A2921DEE3E9D00598384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD36A2931DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD36A2941DEE3E9D00598384 /* Debug */,
+				AD36A2951DEE3E9D00598384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD36A2961DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD36A2971DEE3E9D00598384 /* Debug */,
+				AD36A2981DEE3E9D00598384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD36A2991DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD36A29A1DEE3E9D00598384 /* Debug */,
+				AD36A29B1DEE3E9D00598384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD36A25E1DEE3E9D00598384 /* Project object */;
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "546C1BF5B722140A73F79A50ADA883984E7FA86C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6D97EA148573B3DEC0E705A25B78217DC12873FD" : 9223372036854775807,
+    "546C1BF5B722140A73F79A50ADA883984E7FA86C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE7BFFD9-E928-4A92-B1C4-22196AA8E085",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6D97EA148573B3DEC0E705A25B78217DC12873FD" : "",
+    "546C1BF5B722140A73F79A50ADA883984E7FA86C" : "DemoCodes\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YCSimpleSliderDrawer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/YCSimpleSliderDrawer\/YCSimpleSliderDrawer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XuYanci\/DemoCodes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "546C1BF5B722140A73F79A50ADA883984E7FA86C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XuYanci\/Monkey.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D97EA148573B3DEC0E705A25B78217DC12873FD"
+    }
+  ]
+}
