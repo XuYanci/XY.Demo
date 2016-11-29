@@ -8,7 +8,8 @@
 
 #import "PhotoBrowserViewController.h"
 
-@interface PhotoBrowserViewController () {
+@interface PhotoBrowserViewController ()<UIScrollViewDelegate>
+{
     
 }
 
@@ -72,7 +73,22 @@
 */
 
 
-#pragma mark - delegate 
+#pragma mark - UIScrolViewDelegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return _imageView;
+}
+
+
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width) ? (scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5f : 0.f;
+    
+    CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height) ? (scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5f : 0.f;
+    
+    self.imageView.center = CGPointMake(scrollView.contentSize.width * 0.5f + offsetX, scrollView.contentSize.height * 0.5f + offsetY);
+}
 
 
 #pragma mark - datasource
@@ -86,6 +102,7 @@
 
 - (void)doubleTapInPhotoBrowser:(id)sender {
     NSLog(@"%s",__func__);
+    [self zoomInOut:sender];
 }
 
 - (void)longPressInPhotoBrowser:(id)sender {
@@ -111,9 +128,12 @@
 - (void)configUI  {
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.screenCaptureView];
-    
     [self.scrollView addSubview:self.imageView];
+    [self.scrollView addSubview:self.indicatorView];
+    self.scrollView.delegate = self;
+    
     self.imageView.frame = self.scrollView.bounds;
+    self.indicatorView.center = self.scrollView.center;
     
     
     /*!
@@ -123,18 +143,88 @@
     self.screenCaptureView.image = [self captureFullScreenWhenEnterPhotoBrowser];
 }
 
-- (void)relayoutFrameOfSubViews{}
+- (void)relayoutFrameOfSubViews{
+  
 
-- (void)zoomIn      {}
-- (void)zoomOut     {}
-- (void)swipeOut    {}
+}
 
+- (void)zoomInOut:(UITapGestureRecognizer *)tapGesture      {
+    CGPoint tapPoint = [tapGesture locationInView:self.scrollView];
+    if (self.scrollView.zoomScale > 1.f)
+    {
+        [self.scrollView setZoomScale:1.f animated:YES];
+    }
+    else
+    {
+        [self zoomScrollView:self.scrollView toPoint:tapPoint withScale:2.f animated:YES];
+    }
+}
+
+- (void)swipeOut    {
+
+}
+
+
+- (void)zoomScrollView:(UIScrollView*)view toPoint:(CGPoint)zoomPoint withScale: (CGFloat)scale animated: (BOOL)animated
+{
+    //Normalize current content size back to content scale of 1.0f
+    CGSize contentSize = CGSizeZero;
+    
+    contentSize.width = (view.contentSize.width / view.zoomScale);
+    contentSize.height = (view.contentSize.height / view.zoomScale);
+    
+    //translate the zoom point to relative to the content rect
+    //jimneylee add compare contentsize with bounds's size
+    if (view.contentSize.width < view.bounds.size.width)
+    {
+        zoomPoint.x = (zoomPoint.x / view.bounds.size.width) * contentSize.width;
+    }
+    else
+    {
+        zoomPoint.x = (zoomPoint.x / view.contentSize.width) * contentSize.width;
+    }
+    if (view.contentSize.height < view.bounds.size.height)
+    {
+        zoomPoint.y = (zoomPoint.y / view.bounds.size.height) * contentSize.height;
+    }
+    else
+    {
+        zoomPoint.y = (zoomPoint.y / view.contentSize.height) * contentSize.height;
+    }
+    
+    //derive the size of the region to zoom to
+    CGSize zoomSize = CGSizeZero;
+    zoomSize.width = view.bounds.size.width / scale;
+    zoomSize.height = view.bounds.size.height / scale;
+    
+    //offset the zoom rect so the actual zoom point is in the middle of the rectangle
+    CGRect zoomRect = CGRectZero;
+    zoomRect.origin.x = zoomPoint.x - zoomSize.width / 2.0f;
+    zoomRect.origin.y = zoomPoint.y - zoomSize.height / 2.0f;
+    zoomRect.size.width = zoomSize.width;
+    zoomRect.size.height = zoomSize.height;
+    
+    //apply the resize
+    [view zoomToRect: zoomRect animated: animated];
+}
+
+/*! 计算放大后的frame */
+- (CGRect)calculateScaledFinalFrame
+{
+    CGSize thumbSize = _thumbnail.size;
+    CGFloat finalHeight = self.view.frame.size.width * (thumbSize.height / thumbSize.width);
+    CGFloat top = 0.f;
+    if (finalHeight < self.view.frame.size.height)
+    {
+        top = (self.view.frame.size.height - finalHeight) / 2.f;
+    }
+    return CGRectMake(0.f, top, self.view.frame.size.width, finalHeight);
+}
 
 /*! 显示效果*/
 - (void)showWithAnimations {
-    
-    /*!TODO: Caculate final rect */
-    CGRect finalRect = CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height / 2.0);
+
+    CGRect finalRect = [self calculateScaledFinalFrame];
     
     self.imageView.frame = _fromRect;
     self.imageView.image = _thumbnail;
@@ -143,7 +233,22 @@
         self.imageView.frame = finalRect;
         self.screenCaptureView.alpha = 0.0;
     } completion:^(BOOL finished) {
+        [self.indicatorView startAnimating];
         
+        /*! Async download image and display*/
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_originImageUrl]];
+            if (imageData) {
+                UIImage *image = [UIImage imageWithData:imageData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.indicatorView stopAnimating];
+                    self.imageView.image = image;
+                });
+            }
+            else {
+                [self.indicatorView stopAnimating];
+            }
+        });
     }];
 }
 
@@ -175,6 +280,9 @@
 - (UIScrollView*)scrollView {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+        _scrollView.zoomScale = 1.0;
+        _scrollView.minimumZoomScale = 1.0;
+        _scrollView.maximumZoomScale = 2.0f;
     }
     return _scrollView;
 }
@@ -197,7 +305,7 @@
 
 - (UIActivityIndicatorView *)indicatorView {
     if (!_indicatorView) {
-        _indicatorView = [[UIActivityIndicatorView alloc]init];
+        _indicatorView = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
     }
     return _indicatorView;
 }

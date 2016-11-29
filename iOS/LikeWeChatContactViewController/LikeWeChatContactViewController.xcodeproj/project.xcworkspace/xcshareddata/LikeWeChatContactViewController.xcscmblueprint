@@ -7,14 +7,14 @@
     "6D97EA148573B3DEC0E705A25B78217DC12873FD" : 9223372036854775807,
     "546C1BF5B722140A73F79A50ADA883984E7FA86C" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8FD9B143-1348-4267-8980-B3734606D079",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4E4A947F-D130-45CB-B89E-AFF87B7FBD48",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "6D97EA148573B3DEC0E705A25B78217DC12873FD" : "",
     "546C1BF5B722140A73F79A50ADA883984E7FA86C" : "DemoCodes\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "LikeWechatPhotoBrowser",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LikeWeChatContactViewController",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/LikeWeChatPhotoBrowser\/LikeWechatPhotoBrowser\/LikeWechatPhotoBrowser.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/LikeWeChatContactViewController\/LikeWeChatContactViewController.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XuYanci\/DemoCodes.git",
