@@ -10,7 +10,7 @@
 
 @interface PhotoBrowserViewController ()<UIScrollViewDelegate>
 {
-    
+    BOOL _isImageDownload;
 }
 
 
@@ -90,6 +90,12 @@
     self.imageView.center = CGPointMake(scrollView.contentSize.width * 0.5f + offsetX, scrollView.contentSize.height * 0.5f + offsetY);
 }
 
+#pragma mark -
+- (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (!error) {
+        NSLog(@"成功保存到相册");
+    }
+}
 
 #pragma mark - datasource
 
@@ -105,8 +111,18 @@
     [self zoomInOut:sender];
 }
 
-- (void)longPressInPhotoBrowser:(id)sender {
+- (void)longPressInPhotoBrowser:(UILongPressGestureRecognizer *)sender {
     NSLog(@"%s",__func__);
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        if (_isImageDownload) {
+            UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(imageSavedToPhotosAlbum:didFinishSavingWithError:contextInfo:), nil);
+        }
+        else {
+            NSLog(@"图片未下载完成..");
+        }
+    }
+    else {}
 }
 
 #pragma mark - funcs
@@ -134,7 +150,6 @@
     
     self.imageView.frame = self.scrollView.bounds;
     self.indicatorView.center = self.scrollView.center;
-    
     
     /*!
         Here we capture before image when enter photo browser as our background image,
@@ -234,6 +249,7 @@
         self.screenCaptureView.alpha = 0.0;
     } completion:^(BOOL finished) {
         [self.indicatorView startAnimating];
+        _isImageDownload = false;
         
         /*! Async download image and display*/
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -243,6 +259,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.indicatorView stopAnimating];
                     self.imageView.image = image;
+                    _isImageDownload = true;
                 });
             }
             else {
@@ -255,6 +272,7 @@
 /*! 隐藏效果 */
 - (void)dismissWithAnimations {
     CGRect newFromRect = _fromRect;
+    /*! 这里需要考虑到scrollView的ContentOffset */
     newFromRect.origin = CGPointMake(_fromRect.origin.x + self.scrollView.contentOffset.x,
                                      _fromRect.origin.y + self.scrollView.contentOffset.y);
     [UIView animateWithDuration:1.0 animations:^{

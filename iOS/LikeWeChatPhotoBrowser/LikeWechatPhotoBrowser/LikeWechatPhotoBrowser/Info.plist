@@ -136,5 +136,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>若不允许，你将可能无法保存图片</string>
 </dict>
 </plist>
