@@ -4,8 +4,7 @@ Demo codes place here ^_^
 # Front (前端)
 1. 如何编写一个轮播图 	
 	- 轮播图滚动
-	- 添加PageIndicator  (ING)
-	
+	- 添加PageIndicator 
 
 
 # iOS 
