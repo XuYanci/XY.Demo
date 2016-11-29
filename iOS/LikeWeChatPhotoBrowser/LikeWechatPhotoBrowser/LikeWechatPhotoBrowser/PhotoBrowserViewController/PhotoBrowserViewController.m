@@ -254,9 +254,11 @@
 
 /*! 隐藏效果 */
 - (void)dismissWithAnimations {
-    
+    CGRect newFromRect = _fromRect;
+    newFromRect.origin = CGPointMake(_fromRect.origin.x + self.scrollView.contentOffset.x,
+                                     _fromRect.origin.y + self.scrollView.contentOffset.y);
     [UIView animateWithDuration:1.0 animations:^{
-        self.imageView.frame = _fromRect;
+        self.imageView.frame = newFromRect;
         self.screenCaptureView.alpha = 1.0;
     } completion:^(BOOL finished) {
         [self dismissViewControllerAnimated:NO completion:nil];
