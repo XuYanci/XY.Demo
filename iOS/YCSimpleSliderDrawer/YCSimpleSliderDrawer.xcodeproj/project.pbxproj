@@ -15,6 +15,9 @@
 		AD36A2791DEE3E9D00598384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */; };
 		AD36A2841DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A2831DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m */; };
 		AD36A28F1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */; };
+		AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */; };
+		AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */; };
+		AD4602E31DF462E6006C35ED /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AD4602E21DF462E6006C35ED /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		AD36A28A1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCSimpleSliderDrawerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCSimpleSliderDrawerUITests.m; sourceTree = "<group>"; };
 		AD36A2901DEE3E9D00598384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD36A29C1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCustomUIGestureRecognizer.h; sourceTree = "<group>"; };
+		AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCustomUIGestureRecognizer.m; sourceTree = "<group>"; };
+		AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCWIthButtonAndTapGestureViewController.h; sourceTree = "<group>"; };
+		AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCWIthButtonAndTapGestureViewController.m; sourceTree = "<group>"; };
+		AD4602E21DF462E6006C35ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 		AD36A2681DEE3E9D00598384 /* YCSimpleSliderDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				AD36A29C1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.h */,
+				AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */,
+				AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */,
+				AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */,
 				AD36A26C1DEE3E9D00598384 /* AppDelegate.h */,
 				AD36A26D1DEE3E9D00598384 /* AppDelegate.m */,
 				AD36A26F1DEE3E9D00598384 /* ViewController.h */,
@@ -110,6 +122,7 @@
 				AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */,
 				AD36A27A1DEE3E9D00598384 /* Info.plist */,
 				AD36A2691DEE3E9D00598384 /* Supporting Files */,
+				AD4602E21DF462E6006C35ED /* README.md */,
 			);
 			path = YCSimpleSliderDrawer;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 				TargetAttributes = {
 					AD36A2651DEE3E9D00598384 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 32URLK6K7Y;
 						ProvisioningStyle = Automatic;
 					};
 					AD36A27E1DEE3E9D00598384 = {
@@ -273,6 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4602E31DF462E6006C35ED /* README.md in Sources */,
+				AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */,
+				AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */,
 				AD36A2711DEE3E9D00598384 /* ViewController.m in Sources */,
 				AD36A26E1DEE3E9D00598384 /* AppDelegate.m in Sources */,
 				AD36A26B1DEE3E9D00598384 /* main.m in Sources */,
@@ -424,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 32URLK6K7Y;
 				INFOPLIST_FILE = YCSimpleSliderDrawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawer;
@@ -435,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 32URLK6K7Y;
 				INFOPLIST_FILE = YCSimpleSliderDrawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxer.YCSimpleSliderDrawer;
@@ -507,6 +526,7 @@
 				AD36A2951DEE3E9D00598384 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD36A2961DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +535,7 @@
 				AD36A2981DEE3E9D00598384 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD36A2991DEE3E9D00598384 /* Build configuration list for PBXNativeTarget "YCSimpleSliderDrawerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +544,7 @@
 				AD36A29B1DEE3E9D00598384 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
