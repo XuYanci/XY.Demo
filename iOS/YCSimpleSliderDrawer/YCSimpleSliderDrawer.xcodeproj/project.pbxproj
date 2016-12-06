@@ -18,6 +18,8 @@
 		AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */; };
 		AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */; };
 		AD4602E31DF462E6006C35ED /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AD4602E21DF462E6006C35ED /* README.md */; };
+		AD4602E61DF62797006C35ED /* YCResponderChainTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */; };
+		AD4603041DF6A60B006C35ED /* YCTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4603031DF6A60B006C35ED /* YCTouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCWIthButtonAndTapGestureViewController.h; sourceTree = "<group>"; };
 		AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCWIthButtonAndTapGestureViewController.m; sourceTree = "<group>"; };
 		AD4602E21DF462E6006C35ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AD4602E41DF62797006C35ED /* YCResponderChainTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCResponderChainTracker.h; sourceTree = "<group>"; };
+		AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCResponderChainTracker.m; sourceTree = "<group>"; };
+		AD4603021DF6A60B006C35ED /* YCTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTouchView.h; sourceTree = "<group>"; };
+		AD4603031DF6A60B006C35ED /* YCTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +119,12 @@
 				AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */,
 				AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */,
 				AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */,
+				AD4602E41DF62797006C35ED /* YCResponderChainTracker.h */,
+				AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */,
 				AD36A26C1DEE3E9D00598384 /* AppDelegate.h */,
 				AD36A26D1DEE3E9D00598384 /* AppDelegate.m */,
+				AD4603021DF6A60B006C35ED /* YCTouchView.h */,
+				AD4603031DF6A60B006C35ED /* YCTouchView.m */,
 				AD36A26F1DEE3E9D00598384 /* ViewController.h */,
 				AD36A2701DEE3E9D00598384 /* ViewController.m */,
 				AD36A2721DEE3E9D00598384 /* Main.storyboard */,
@@ -289,9 +299,11 @@
 			files = (
 				AD4602E31DF462E6006C35ED /* README.md in Sources */,
 				AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */,
+				AD4603041DF6A60B006C35ED /* YCTouchView.m in Sources */,
 				AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */,
 				AD36A2711DEE3E9D00598384 /* ViewController.m in Sources */,
 				AD36A26E1DEE3E9D00598384 /* AppDelegate.m in Sources */,
+				AD4602E61DF62797006C35ED /* YCResponderChainTracker.m in Sources */,
 				AD36A26B1DEE3E9D00598384 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
