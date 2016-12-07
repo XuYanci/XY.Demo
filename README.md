@@ -23,12 +23,12 @@ Demo codes place here ^_^
     
 3. 抽屉效果
 
-    - 复习iOS 事件响应机制 
+    - 复习iOS 事件响应机制 
     
     - Deep Learn Responder Chain 
+    
+    - iOS 侧拉实现 
     
-    - iOS 侧拉实现 (ING)
-  
     - iOS 侧拉常见手势冲突解决方案
     
  
