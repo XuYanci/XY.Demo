@@ -1,18 +1,18 @@
 //
-//  UIViewWithButtonAndTapGestureViewController.m
+//  YCSliderDrawerViewController.m
 //  YCSimpleSliderDrawer
 //
-//  Created by Yanci on 16/12/4.
+//  Created by Yanci on 16/12/7.
 //  Copyright © 2016年 Yanci. All rights reserved.
 //
 
-#import "YCWIthButtonAndTapGestureViewController.h"
+#import "YCSliderDrawerViewController.h"
 
-@interface YCWIthButtonAndTapGestureViewController ()
+@interface YCSliderDrawerViewController ()
 
 @end
 
-@implementation YCWIthButtonAndTapGestureViewController
+@implementation YCSliderDrawerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

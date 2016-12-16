@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 #import "YCTouchView.h"
+#import "Handler.h"
+#import "ConcreteHandler1.h"
+#import "ConcreteHandler2.h"
+
+//#define TEST_RESPONDER_PATTERN
+#define TEST_HITTEST_SIMULATE
 
 @interface ViewController ()
 
@@ -18,14 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-   
-
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+#ifdef TEST_HITTEST_SIMULATE
     /*! Simulate hittest */
     self.touchViewA.identifier = @"A";
     self.touchViewB.identifier = @"B";
@@ -37,6 +41,15 @@
     if ([hittestView isKindOfClass:[YCTouchView class]]) {
         NSLog(@"%@",((YCTouchView *)hittestView).identifier);
     }
+#endif
+ 
+#ifdef TEST_RESPONDER_PATTERN
+    Handler *h1 = [[ConcreteHandler1 alloc]init];
+    Handler *h2 = [[ConcreteHandler2 alloc]init];
+    
+    [h1 setSuccessor:h2];
+    [h1 HandleRequest];
+#endif
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,11 +15,12 @@
 		AD36A2791DEE3E9D00598384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD36A2771DEE3E9D00598384 /* LaunchScreen.storyboard */; };
 		AD36A2841DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A2831DEE3E9D00598384 /* YCSimpleSliderDrawerTests.m */; };
 		AD36A28F1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */; };
-		AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */; };
-		AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */; };
 		AD4602E31DF462E6006C35ED /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AD4602E21DF462E6006C35ED /* README.md */; };
-		AD4602E61DF62797006C35ED /* YCResponderChainTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */; };
-		AD4603041DF6A60B006C35ED /* YCTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4603031DF6A60B006C35ED /* YCTouchView.m */; };
+		AD4603091DF7BD83006C35ED /* Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4603081DF7BD83006C35ED /* Handler.m */; };
+		AD46030C1DF7BD8F006C35ED /* ConcreteHandler1.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46030B1DF7BD8F006C35ED /* ConcreteHandler1.m */; };
+		AD46030F1DF7BD99006C35ED /* ConcreteHandler2.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46030E1DF7BD99006C35ED /* ConcreteHandler2.m */; };
+		ADA617D81DF8022C0012F143 /* YCTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA617D71DF8022C0012F143 /* YCTouchView.m */; };
+		ADA617DC1DF803190012F143 /* YCSliderDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA617DB1DF803190012F143 /* YCSliderDrawerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,15 +57,17 @@
 		AD36A28A1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCSimpleSliderDrawerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD36A28E1DEE3E9D00598384 /* YCSimpleSliderDrawerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCSimpleSliderDrawerUITests.m; sourceTree = "<group>"; };
 		AD36A2901DEE3E9D00598384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD36A29C1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCCustomUIGestureRecognizer.h; sourceTree = "<group>"; };
-		AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCCustomUIGestureRecognizer.m; sourceTree = "<group>"; };
-		AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCWIthButtonAndTapGestureViewController.h; sourceTree = "<group>"; };
-		AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCWIthButtonAndTapGestureViewController.m; sourceTree = "<group>"; };
 		AD4602E21DF462E6006C35ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		AD4602E41DF62797006C35ED /* YCResponderChainTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCResponderChainTracker.h; sourceTree = "<group>"; };
-		AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCResponderChainTracker.m; sourceTree = "<group>"; };
-		AD4603021DF6A60B006C35ED /* YCTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTouchView.h; sourceTree = "<group>"; };
-		AD4603031DF6A60B006C35ED /* YCTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTouchView.m; sourceTree = "<group>"; };
+		AD4603071DF7BD83006C35ED /* Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Handler.h; sourceTree = "<group>"; };
+		AD4603081DF7BD83006C35ED /* Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Handler.m; sourceTree = "<group>"; };
+		AD46030A1DF7BD8F006C35ED /* ConcreteHandler1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteHandler1.h; sourceTree = "<group>"; };
+		AD46030B1DF7BD8F006C35ED /* ConcreteHandler1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteHandler1.m; sourceTree = "<group>"; };
+		AD46030D1DF7BD99006C35ED /* ConcreteHandler2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteHandler2.h; sourceTree = "<group>"; };
+		AD46030E1DF7BD99006C35ED /* ConcreteHandler2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteHandler2.m; sourceTree = "<group>"; };
+		ADA617D61DF8022C0012F143 /* YCTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCTouchView.h; sourceTree = "<group>"; };
+		ADA617D71DF8022C0012F143 /* YCTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCTouchView.m; sourceTree = "<group>"; };
+		ADA617DA1DF803190012F143 /* YCSliderDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCSliderDrawerViewController.h; sourceTree = "<group>"; };
+		ADA617DB1DF803190012F143 /* YCSliderDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCSliderDrawerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,16 +118,11 @@
 		AD36A2681DEE3E9D00598384 /* YCSimpleSliderDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				AD36A29C1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.h */,
-				AD36A29D1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m */,
-				AD4602DC1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.h */,
-				AD4602DD1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m */,
-				AD4602E41DF62797006C35ED /* YCResponderChainTracker.h */,
-				AD4602E51DF62797006C35ED /* YCResponderChainTracker.m */,
+				ADA617D51DF8022C0012F143 /* Test */,
+				AD4603061DF7BD6F006C35ED /* ChainOfResponderPattern */,
+				ADA617D91DF803050012F143 /* YCSliderDrawerViewController */,
 				AD36A26C1DEE3E9D00598384 /* AppDelegate.h */,
 				AD36A26D1DEE3E9D00598384 /* AppDelegate.m */,
-				AD4603021DF6A60B006C35ED /* YCTouchView.h */,
-				AD4603031DF6A60B006C35ED /* YCTouchView.m */,
 				AD36A26F1DEE3E9D00598384 /* ViewController.h */,
 				AD36A2701DEE3E9D00598384 /* ViewController.m */,
 				AD36A2721DEE3E9D00598384 /* Main.storyboard */,
@@ -161,6 +159,38 @@
 				AD36A2901DEE3E9D00598384 /* Info.plist */,
 			);
 			path = YCSimpleSliderDrawerUITests;
+			sourceTree = "<group>";
+		};
+		AD4603061DF7BD6F006C35ED /* ChainOfResponderPattern */ = {
+			isa = PBXGroup;
+			children = (
+				AD4603071DF7BD83006C35ED /* Handler.h */,
+				AD4603081DF7BD83006C35ED /* Handler.m */,
+				AD46030A1DF7BD8F006C35ED /* ConcreteHandler1.h */,
+				AD46030B1DF7BD8F006C35ED /* ConcreteHandler1.m */,
+				AD46030D1DF7BD99006C35ED /* ConcreteHandler2.h */,
+				AD46030E1DF7BD99006C35ED /* ConcreteHandler2.m */,
+			);
+			path = ChainOfResponderPattern;
+			sourceTree = "<group>";
+		};
+		ADA617D51DF8022C0012F143 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				ADA617D61DF8022C0012F143 /* YCTouchView.h */,
+				ADA617D71DF8022C0012F143 /* YCTouchView.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		ADA617D91DF803050012F143 /* YCSliderDrawerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ADA617DA1DF803190012F143 /* YCSliderDrawerViewController.h */,
+				ADA617DB1DF803190012F143 /* YCSliderDrawerViewController.m */,
+			);
+			name = YCSliderDrawerViewController;
+			path = ChainOfResponderPattern/YCSliderDrawerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,14 +327,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD46030F1DF7BD99006C35ED /* ConcreteHandler2.m in Sources */,
 				AD4602E31DF462E6006C35ED /* README.md in Sources */,
-				AD36A29E1DEE5CAF00598384 /* YCCustomUIGestureRecognizer.m in Sources */,
-				AD4603041DF6A60B006C35ED /* YCTouchView.m in Sources */,
-				AD4602DE1DF46011006C35ED /* YCWIthButtonAndTapGestureViewController.m in Sources */,
+				ADA617D81DF8022C0012F143 /* YCTouchView.m in Sources */,
 				AD36A2711DEE3E9D00598384 /* ViewController.m in Sources */,
 				AD36A26E1DEE3E9D00598384 /* AppDelegate.m in Sources */,
-				AD4602E61DF62797006C35ED /* YCResponderChainTracker.m in Sources */,
+				AD4603091DF7BD83006C35ED /* Handler.m in Sources */,
+				ADA617DC1DF803190012F143 /* YCSliderDrawerViewController.m in Sources */,
 				AD36A26B1DEE3E9D00598384 /* main.m in Sources */,
+				AD46030C1DF7BD8F006C35ED /* ConcreteHandler1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
