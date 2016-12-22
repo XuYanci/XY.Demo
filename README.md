@@ -24,6 +24,6 @@ Demo codes place here ^_^
 	- iOS 侧拉常见手势冲突解决方案
     
 4. 自己动手写一个Pod库
-
+       	- https://github.com/XuYanci/YCPodTestLibrary
  
 
