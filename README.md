@@ -25,7 +25,7 @@ Demo codes place here ^_^
     
 4. 自己动手写一个Pod库
 5. 应用内购买 
-
+6. 切换横竖屏
 
  
 
